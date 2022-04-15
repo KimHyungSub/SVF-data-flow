@@ -31,3 +31,7 @@ clang -S -c -g -fno-discard-value-names -emit-llvm example.c -o example.ll
 ```
 ./bin/svf-data-flow copter_4_1_llvm_13.bc > output.txt
 ```
+## 6. Tips 
+- The bc file must be complied by the same LLVM version of this SVF's one (LLVM 13.0.0).<br>
+- If you want to analyze other configuration parameters, please put new configuration parameters into 'trace_target_list.txt'<br>
+- This data flow analysis also can be used to trace other variables in RV control software.<br>
