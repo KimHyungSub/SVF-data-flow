@@ -1,3 +1,16 @@
+## Intro
+We adopted https://github.com/SVF-tools/SVF-example to implement data flow analysis in drone control software. <br>
+We release this source code in the hope of benefiting others.<br>
+You are kindly asked to acknowledge usage of the tool by citing SVF papers (http://svf-tools.github.io/SVF) as well as our paper.<br>
+```
+@inproceedings{kim2021pgfuzz,
+  title={PGFUZZ: Policy-Guided Fuzzing for Robotic Vehicles},
+  author={Kim, Hyungsub and Ozmen, Muslum Ozgur and Bianchi, Antonio and Celik, Z Berkay and Xu, Dongyan},
+  booktitle={Proceedings of the Network and Distributed System Security Symposium (NDSS)},
+  year={2021}
+}
+```
+
 ## 1. Install SVF and its dependence (LLVM pre-built binary) via npm
 ```
 npm i --silent svf-lib --prefix ${HOME}
