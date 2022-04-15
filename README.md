@@ -23,7 +23,7 @@ clang -S -c -g -fno-discard-value-names -emit-llvm example.c -o example.ll
 ./bin/svf-data-flow example.ll
 ```
 
-## 5. Analyze a ArduPilot bc file using svf-data-flow executable
+## 5. Analyze an ArduPilot bc file using svf-data-flow executable
 - 'trace_target_list.txt' contains a list of configuration parameters.<br>
 - This executable reads 'trace_target_list.txt' and then collects all the uses of each configuration parameter.<br>
 - You can check the analysis output in 'output.txt'.<br>
