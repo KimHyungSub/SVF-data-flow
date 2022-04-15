@@ -5,7 +5,7 @@ npm i --silent svf-lib --prefix ${HOME}
 
 ## 2. Clone repository
 ```
-git clone https://github.com/SVF-tools/SVF-example.git
+git clone https://github.com/KimHyungSub/SVF-data-flow.git
 ```
 
 ## 3. Setup SVF environment and build your project 
@@ -16,8 +16,14 @@ cmake the project (`cmake -DCMAKE_BUILD_TYPE=Debug .` for debug build)
 ```
 cmake . && make
 ```
-## 4. Analyze a bc file using svf-ex executable
+
+## 4. Analyze a example bc file using svf-data-flow executable
 ```
 clang -S -c -g -fno-discard-value-names -emit-llvm example.c -o example.ll
-./bin/svf-ex example.ll
+./bin/svf-data-flow example.ll
+```
+
+## 5. Analyze a ArduPilot bc file using svf-data-flow executable
+```
+./bin/svf-data-flow copter_4_1_llvm_13.bc > output.txt
 ```
