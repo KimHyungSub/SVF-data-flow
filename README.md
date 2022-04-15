@@ -1,5 +1,5 @@
 ## Intro
-We adopted https://github.com/SVF-tools/SVF-example to implement data flow analysis in drone control software. <br>
+We adapted https://github.com/SVF-tools/SVF-example to implement data flow analysis in drone control software. <br>
 We release this source code in the hope of benefiting others.<br>
 You are kindly asked to acknowledge usage of the tool by citing SVF papers (http://svf-tools.github.io/SVF) as well as our paper.<br>
 ```
