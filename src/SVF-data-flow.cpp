@@ -175,7 +175,23 @@ void traverseOnVFG(const SVFG* vfg, Value* val)
 
         			//outs() << "[Trace] " << operand_1_str << ", "<< operand_2_str << "\n";
         			if (operand_1_str.empty() == 0) {
-        				outs() << "[Trace] " << operand_1_str << "\n";
+        				//outs() << "[Trace] " << operand_1_str << "\n";
+
+        				const DebugLoc &location = store->getDebugLoc();
+
+        				// Print variable, file name, line number if there is debug info
+        				if (location) {
+        					int line = location.getLine();
+        					const DILocation *debug_info =location.get();
+
+        					outs() << "[Trace] " << operand_1_str << ", " << debug_info->getFilename() << ", " << line << "\n";
+        				}
+        				// Print only variable if there is no debug info
+        				else {
+        					outs() << "[Trace] " << operand_1_str << "\n";
+        				}
+
+
         			}
         		}
         	}
